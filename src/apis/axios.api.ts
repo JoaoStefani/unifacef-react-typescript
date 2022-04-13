@@ -1,4 +1,4 @@
-import { loadingOn, loadingOff } from '../components/loading';
+import { loadingOn, loadingOff } from "../components/loading";
 import axios from 'axios';
 
 axios.interceptors.request.use(async (config) => {
@@ -6,9 +6,9 @@ axios.interceptors.request.use(async (config) => {
     return config;
 }, (error) => {
     return Promise.reject(error);
+
 });
-
-
+// 
 axios.interceptors.response.use(async (response) => {
     loadingOff();
     return response;
